@@ -9,6 +9,10 @@ then
   alias la='gls -A --color'
 fi
 
-alias ssj="ssh j"
 alias gsd="git sd"
 alias dots="cd ~/.dotfiles"
+alias gg="cd ~/Desktop/git"
+alias ggb="gg && cd buzzvertical"
+alias ggj="gg && cd jobs"
+alias ggf="gg && cd feeds"
+alias ggc="gg && cd personal/caseyw"

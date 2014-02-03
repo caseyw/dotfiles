@@ -1,0 +1,1 @@
+alias ssj="ssh j"
