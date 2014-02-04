@@ -13,3 +13,8 @@ brew update
 
 # Install homebrew packages
 $ZSH/homebrew/install.sh 2>&1
+
+npm update
+
+# Install npm packages
+$ZSH/npm/install.sh 2>&1
