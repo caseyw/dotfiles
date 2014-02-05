@@ -16,6 +16,10 @@ fi
 # Install homebrew packages
 brew install grc coreutils spark ack ctags ffmpeg git mutt siege tidy tmux tofrodos watch wget youtube-dl yuicompressor node
 
+# Tap PHP shizzle
+brew tap josegonzalez/homebrew-php
+brew install php-cs-fixer
+
 # Tap Cask, to allow us to install GUI's
 brew tap phinze/cask
 
