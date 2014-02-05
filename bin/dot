@@ -14,7 +14,15 @@ brew update
 # Install homebrew packages
 $ZSH/homebrew/install.sh 2>&1
 
+# Update npm
 npm update
 
 # Install npm packages
 $ZSH/npm/install.sh 2>&1
+
+# Update gems
+sudo gem update
+
+# Install gems
+$ZSH/gem/install.sh 2>&1
+
