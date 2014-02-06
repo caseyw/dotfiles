@@ -2,3 +2,5 @@
 
 # We have to install git smart
 sudo gem install git-smart
+
+sudo gem install tmuxinator
