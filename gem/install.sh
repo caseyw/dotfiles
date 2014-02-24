@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # We have to install git smart
-sudo gem install git-smart
+gem install git-smart
 
-sudo gem install tmuxinator
+gem install tmuxinator
+
+gem install cloudapp_api

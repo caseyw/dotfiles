@@ -15,6 +15,10 @@ fi
 
 # Install homebrew packages
 brew install grc coreutils spark ack ctags ffmpeg git mutt siege tidy tmux tofrodos watch wget youtube-dl yuicompressor node
+brew install bash-completion
+brew install cmus
+
+
 
 # Tap PHP shizzle
 brew tap josegonzalez/homebrew-php
@@ -40,6 +44,7 @@ brew cask install mysql-workbench
 brew cask install phpstorm
 brew cask install skype
 brew cask install sublime-text
+brew cask install cloudapp
 
 
 exit 0
