@@ -30,6 +30,13 @@ brew tap phinze/cask
 # Install Cask
 brew install brew-cask
 
+
+# Vagrant, VirtualBox
+
+brew cask install vagrant
+brew cask install virtualbox
+
+
 # Install GUI's
 brew cask install acorn
 brew cask install adium
