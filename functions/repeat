@@ -1,0 +1,9 @@
+function repeat() { 
+    local times="$1"; 
+    shift; 
+    local cmd="$@"; 
+
+    for ((i = 1; i <= $times; i++ )); do 
+       eval "$cmd"; 
+    done 
+}
