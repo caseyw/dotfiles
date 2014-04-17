@@ -1,0 +1,69 @@
+# ~/.tmuxinator/alertwebs.yml
+
+name: alertweb
+root: ~/Desktop/git/buzzvertical/alert
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - web:
+      layout: even-vertical
+      panes:
+        - a1:
+          - ssh alert1
+          - cd /home/sites
+          - bkup alert_prod
+          - cd alert_prod
+          - git pull
+          - ./composer.phar update
+          - exit
+          - exit
+        - a2:
+          - ssh alert2
+          - cd /home/sites
+          - bkup alert_prod
+          - cd alert_prod
+          - git pull
+          - ./composer.phar update
+          - exit
+          - exit
+        - a3:
+          - ssh alert3
+          - cd /home/sites
+          - bkup alert_prod
+          - cd alert_prod
+          - git pull
+          - ./composer.phar update
+          - exit
+          - exit
+        - a4:
+          - ssh alert4
+          - cd /home/sites
+          - bkup alert_prod
+          - cd alert_prod
+          - git pull
+          - ./composer.phar update
+          - exit
+          - exit
+#  - gm:
+#    - ssh alertgm
+#    - cd /home/sites
+#    - bkup alert
+#    - cd alert
+#    - git pull
+#    - ant update-configs
+#    - ./composer.phar selfupdate
+#    - ./composer.phar update
