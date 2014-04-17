@@ -39,4 +39,15 @@ do
   source $file
 done
 
+# Don't allow duplicate history lines
+setopt HIST_IGNORE_DUPS
+
+# TESTING RBENV
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 unset config_files
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

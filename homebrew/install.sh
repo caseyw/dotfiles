@@ -18,11 +18,23 @@ brew install grc coreutils spark ack ctags ffmpeg git mutt siege tidy tmux tofro
 brew install bash-completion
 brew install cmus
 
-
-
 # Tap PHP shizzle
 brew tap josegonzalez/homebrew-php
+brew tap homebrew/completions
+brew install php-code-sniffer
+brew install phpmd
+brew install phpcpd
+brew install eeoip
+brew install php54-geoip
+
+
 brew install php-cs-fixer
+brew install vagrant-completion
+
+# Andriod
+brew install android-sdk
+
+
 
 # Tap Cask, to allow us to install GUI's
 brew tap phinze/cask

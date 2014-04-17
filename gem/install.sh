@@ -6,3 +6,6 @@ gem install git-smart
 gem install tmuxinator
 
 gem install cloudapp_api
+
+gem install compass
+
