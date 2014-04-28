@@ -19,51 +19,71 @@ root: ~/Desktop/git/buzzvertical/alert
 # tmux_command: byobu
 
 windows:
-  - web:
-      layout: even-vertical
-      panes:
-        - a1:
-          - ssh alert1
-          - cd /home/sites
-          - bkup alert_prod
-          - cd alert_prod
-          - git pull
-          - ./composer.phar update
-          - exit
-          - exit
-        - a2:
-          - ssh alert2
-          - cd /home/sites
-          - bkup alert_prod
-          - cd alert_prod
-          - git pull
-          - ./composer.phar update
-          - exit
-          - exit
-        - a3:
-          - ssh alert3
-          - cd /home/sites
-          - bkup alert_prod
-          - cd alert_prod
-          - git pull
-          - ./composer.phar update
-          - exit
-          - exit
-        - a4:
-          - ssh alert4
-          - cd /home/sites
-          - bkup alert_prod
-          - cd alert_prod
-          - git pull
-          - ./composer.phar update
-          - exit
-          - exit
-#  - gm:
-#    - ssh alertgm
-#    - cd /home/sites
-#    - bkup alert
-#    - cd alert
-#    - git pull
-#    - ant update-configs
-#    - ./composer.phar selfupdate
-#    - ./composer.phar update
+  - a1:
+    - ssh alertweb1
+    - cd /home/sites
+    - df
+    - bkup alert_prod
+    - cd alert_prod
+    - git pull
+    - ant composer-install-prod
+    - df
+  - a2:
+    - ssh alertweb2
+    - cd /home/sites
+    - df
+    - bkup alert_prod
+    - cd alert_prod
+    - git pull
+    - ant composer-install-prod
+    - df
+  - a3:
+    - ssh alertweb3
+    - cd /home/sites
+    - df
+    - bkup alert_prod
+    - cd alert_prod
+    - git pull
+    - ant composer-install-prod
+    - df
+  - a4:
+    - ssh alertweb4
+    - cd /home/sites
+    - df
+    - bkup alert_prod
+    - cd alert_prod
+    - git pull
+    - ant composer-install-prod
+    - df
+  - cron:
+    - ssh alertcron
+    - cd /home/sites
+    - df
+    - bkup alert_prod
+    - cd alert_prod
+    - git pull
+    - ant update-configs
+    - ant composer-install-prod
+    - df
+  - redis:
+    - ssh alertredis
+    - cd /home/sites
+    - df
+    - bkup alert_prod
+    - cd alert_prod
+    - git pull
+    - ant update-configs
+    - ant composer-install-prod
+    - df
+  - gm:
+    - ssh alertgm
+    - cd /home/sites
+    - df
+    - bkup alert
+    - cd alert
+    - git pull
+    - ant update-configs
+    - ant composer-install-prod
+    - df
+#    - cd schema
+#    - ./doctrine m:s
