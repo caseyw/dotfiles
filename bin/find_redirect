@@ -1,0 +1,1 @@
+curl "$1" -s -L -o /dev/null -w '\n\n%{url_effective}\n\n'
