@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+now=$(date +"%Y%m%d_%H%M%S")
+
+if [[ $1 == "" ]]
+then
+  echo "You need to specify the directory you need to backup: bkup PROJECT"
+else
+
+    dir="$1"
+    backup="$dir"
+    backup+="_"
+    backup+="$now"
+
+    cp -rvp $dir $backup
+
+    if [ ${?} -eq 0 ]
+    then
+        echo "- Finished"
+    else
+        echo "- We had an issue"
+    fi
+fi

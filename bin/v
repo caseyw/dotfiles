@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+cd "/Users/caseyw/Desktop/git/$1"
+
+if [ "s" = "$2" ]
+then
+
+    vagrant ssh
+
+elif [ "u" = "$2" ]
+then
+
+  vagrant up
+
+else
+
+  vagrant status
+
+fi
