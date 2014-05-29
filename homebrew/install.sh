@@ -17,6 +17,8 @@ fi
 brew install grc coreutils spark ack ctags ffmpeg git mutt siege tidy tmux tofrodos watch wget youtube-dl yuicompressor node
 brew install bash-completion
 brew install cmus
+brew install gnu-sed
+
 
 # Tap PHP shizzle
 brew tap josegonzalez/homebrew-php
